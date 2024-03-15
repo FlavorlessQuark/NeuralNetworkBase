@@ -21,10 +21,17 @@ typedef struct NN
     NN_Layer *layers;
 }               NN;
 
+
 typedef struct TData
 {
-    int count;
     int *input;
     int *output;
-    float rate;
-}           TData;
+}               TData;
+
+typedef struct TDataSet
+{
+    int set_count;
+    int i_count;
+    int o_count;
+    TData *sets;
+}           TDataSet;

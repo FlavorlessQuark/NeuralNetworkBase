@@ -1,2 +1,2 @@
 all:
-	gcc -Wall -Wextra -Werror srcs/main.c -I incl/ -o nn
+	gcc -Wall -Wextra -Werror srcs/main.c srcs/parser/input.c -I incl/ -lm -o nn
