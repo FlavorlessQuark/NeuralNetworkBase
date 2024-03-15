@@ -6,7 +6,7 @@ typedef struct Node
 {
     float weight;
     float value;
-    float biases;
+    float bias;
 }               Node;
 
 typedef struct NN_Layer
