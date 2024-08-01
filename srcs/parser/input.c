@@ -63,3 +63,47 @@ void parse_input(char *filename, TDataSet *training_data)
     } while (x < training_data->set_count && res != NULL);
 
 }
+
+// Train data
+//
+
+// File:
+// LayerCount
+// [L1Nodes, L2Nodes,... ,LnNodes]
+// [L1Actfn, L2ActFn,... ,LnActFn]
+// If loading:
+// [Weight Matrices]
+// [Bias Matrices]
+
+
+// Dense layers -> wieght matrix
+// 1d layers -> Vec
+// sparse layers -> Weight mstrix random 0s
+void load_model(char *filename, NN *network)
+{
+    FILE *file;
+    char line[MAX_CHAR_LINE] = {0};
+    char *res;
+
+    file = fopen(filename, "r");
+
+
+    fgets(line, MAX_CHAR_LINE, file);
+    extract_num(line, &network->layer_count);
+
+
+    network->values  = calloc(network->layer_count, sizeof(Matrix));
+    network->biases  = calloc(network->layer_count - 1, sizeof(Matrix));
+    network->weights = calloc(network->layer_count - 1, sizeof(Matrix));
+    network->activations = calloc(network->layer_count - 1, sizeof(ActFn));
+
+    for (int i = 0; i < network->layer_count - 1; ++i)
+    {
+
+    }
+}
+
+void create_model(char *filename)
+{
+
+}
