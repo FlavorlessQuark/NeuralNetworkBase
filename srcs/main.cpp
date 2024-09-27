@@ -16,8 +16,7 @@
 
 int main()
 {
-    NN_BUILDER builder = NN_BUILDER();
+    NN_BUILDER *builder = new NN_BUILDER;
 
-
-    builder.add(builder.layer.add());
+    builder->add(builder->layer.add());
 }
