@@ -1,0 +1,24 @@
+Pseudo-code :
+
+{
+    builder([
+        dense(inShape)
+        normalize()
+    ]);
+
+    builder ([fns,...]) {
+        if (fns[0].inShape = NULL) {
+            throw error
+        }
+        this->layers = new vec<builder_data>
+        ...fill layer
+
+        for x in fns[1+] {
+            ...set input shape
+        }
+    }
+
+    compile() {
+
+    }
+}

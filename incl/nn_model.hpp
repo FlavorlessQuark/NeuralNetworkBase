@@ -10,8 +10,8 @@ class NN_Model {
         VecArr bias;
         VecArr neurons;
 
-    NN_Model();
-    ~NN_Model();
+    NN_Model() {};
+    ~NN_Model() {};
 
     int fit();
     int predict();
